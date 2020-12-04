@@ -16,10 +16,7 @@ function PokemonList() {
     var [pokemons, setPokemons] = useState([]);
 
     useEffect(() => {
-        var url = urlEs;
-        if (window.navigator.language.includes("en")) {
-            url = urlEn;
-        }
+
         if (!navigator.onLine) {
             if (localStorage.getItem("pokemons") === null) {
                 setPokemons("Loading...");
@@ -29,6 +26,10 @@ function PokemonList() {
             }
         }
         else {
+            var url = urlEs;
+            if (window.navigator.language.includes("en")) {
+                url = urlEn;
+            }
             fetch(url)
                 .then(res => res.json())
                 .then(res => {
@@ -43,6 +44,7 @@ function PokemonList() {
 
     return (
         <>
+            { console.log(pokemons)}
             <h1>
                 Examen 2
             </h1>
@@ -86,16 +88,9 @@ function PokemonList() {
                         </tbody>
                     </Table>
                 </div >
-
             </div>
-
-
         </>
     )
-
-
-
 }
-
 
 export default PokemonList;
