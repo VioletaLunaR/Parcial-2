@@ -7,7 +7,7 @@ import localeEnMessages from "./locales/en";
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import ListMovies from './componentes/listMovies';
+import PokemonList from './componentes/pokemonList';
 import Graph from './componentes/graph';
 import { gray } from 'd3';
 
@@ -22,7 +22,7 @@ function getMessage() {
 
 ReactDOM.render(
   <IntlProvider locale={window.navigator.language} messages={getMessage()}>
-    <ListMovies />
+    <PokemonList />
     <Graph/>
   </IntlProvider>,
   document.getElementById('root')

@@ -1,10 +1,10 @@
 {
 	"Name": "Nombre",
-	"DirectedBy": "Dirigida por",
-	"Country": "País",
-	"Budget": "Presupuesto",
-	"Release": "Lanzamiento",
-	"Views": "Visualizaciones",
+	"Image": "Imagen",
+	"Description": "Descipción",
+	"Height": "Altura",
+	"Weight": "Peso",
+	"Type": "Tipo",
 	"Cast": "Reparto",
 	"Millions": "millones",
 	"Million": "millón"

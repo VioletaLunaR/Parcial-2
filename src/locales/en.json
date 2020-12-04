@@ -1,10 +1,10 @@
 {
 	"Name": "Name",
-	"DirectedBy": "Directed by",
-	"Country": "Country",
-	"Budget": "Budget",
-	"Release": "Release",
-	"Views": "Views",
+	"Image": "Image",
+	"Description": "Description",
+	"Height": "Height",
+	"Weight": "Weight",
+	"Type": "Type",
 	"Cast": "Cast",
 	"Millions": "millions",
 	"Million": "million"

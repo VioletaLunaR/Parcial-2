@@ -1,12 +1,11 @@
 
 import * as d3 from "d3";
 import { useState, useEffect, } from "react";
-const urlEs = "https://gist.githubusercontent.com/josejbocanegra/f784b189117d214578ac2358eb0a01d7/raw/2b22960c3f203bdf4fac44cc7e3849689218b8c0/data-es.json";
-const urlEn = "https://gist.githubusercontent.com/josejbocanegra/8b436480129d2cb8d81196050d485c56/raw/48cc65480675bf8b144d89ecb8bcd663b05e1db0/data-en.json";
+const urlEs = "https://gist.githubusercontent.com/jhonatan89/e379fadf8ed0f5381a2d8f8f3dea90c3/raw/e2bc20df02828d297f99558551e37959ac97a6f8/pokemon-es.json";
+const urlEn = "https://gist.githubusercontent.com/jhonatan89/2089276d3ce0faceff8e55fc3459b818/raw/30ee1a77b3e328108faaaa9aaac6f2ddaa3d3711/pokemons-en.json";
 
 
 export default function Graph() {
-    var [movies, setMovies] = useState([]);
 
     var url = urlEs;
     if (window.navigator.language.includes("en")) {
@@ -50,7 +49,7 @@ export default function Graph() {
             .padding(0.1);
 
         const y = d3.scaleLinear()
-            .domain([0, 9256000])
+            .domain([0, 1102])
             .range([iheight, 0]);
 
         const bars = g.selectAll("rect").data(data);
@@ -59,9 +58,9 @@ export default function Graph() {
             .attr("class", "bar")
             .style("fill", "steelblue")
             .attr("x", d => x(d.name))
-            .attr("y", d => y(d.views))
+            .attr("y", d => y(d.height))
             .attr("width", x.bandwidth())
-            .attr("height", d => iheight - y(d.views))
+            .attr("height", d => iheight - y(d.height))
 
             g.append("g")
             .classed("x--axis", true)
